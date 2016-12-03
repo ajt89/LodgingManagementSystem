@@ -1,0 +1,244 @@
+/*
+Allan Tuquero
+ajt89@drexel.edu
+CS338:GUI, Project
+*/
+
+body {
+      font-family: Arial, Verdana, sans-serif;
+      font-size: 125%;
+      color: #000000;
+      background-color: #90EE90;
+}
+
+#linkBar{
+      width: 85%;
+      height: 50px;
+      background: white;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      top: 50px;
+      border: solid;
+      border-color: black; 
+}
+
+#house{
+      height: auto; 
+      width: auto; 
+      max-width: 40px; 
+      max-height: 40px;
+      top: 10%;
+      position: absolute;
+      right: 1%;
+}
+
+#linkText{
+      position: relative;
+      top: 15%;
+      text-align: left;
+      left: 1%;
+      font-size: 150%;
+}
+
+#myTable {
+      width: 75%;
+      height: 10%;
+      background: white;
+      position: absolute;
+      top: 200%;
+      left: 25px;
+      border: solid;
+      border-color: black;
+      border-collapse: collapse;
+      overflow: auto;
+      z-index: 1;
+}
+
+th, td {
+      border: 2px solid black;
+}
+
+#add {
+      width: 100px;
+      height: 50px;
+      line-height: 50px;
+      background: white;
+      position: absolute;
+      top: 200%;
+      left: 85%;
+      border: solid;
+      border-color: black;
+      text-align: center;
+      color: #000000;
+      cursor: pointer;
+}
+
+#edit {
+      width: 100px;
+      height: 50px;
+      line-height: 50px;
+      background: white;
+      position: absolute;
+      top: 400%;
+      left: 85%;
+      border: solid;
+      border-color: black;
+      text-align: center;
+      color: #000000;
+      cursor: pointer;
+}
+
+#resolve {
+      width: 100px;
+      height: 50px;
+      line-height: 25px;
+      background: white;
+      position: absolute;
+      top: 600%;
+      left: 85%;
+      border: solid;
+      border-color: black;
+      text-align: center;
+      color: #000000;
+      cursor: pointer;
+}
+
+#addStaff:active, #editStaff:active {
+      background-color: #87CEFA;
+}
+
+.highlight {
+      background-color: #87CEFA;  
+}
+
+.modal {
+      display: none;
+      position: relative;
+      z-index: 2;
+      left: 25%;
+      top: 200%;
+      width: 30%;
+      height: 450%;
+      background-color: white;
+      border: solid;
+      border-color: black;
+}
+
+.modal-content {
+      background-content: white;
+      bottom: 15%;
+      width: 100%;
+      font-size: 150%;
+}
+input{
+      border: solid;
+      border-color: black;
+}
+
+label {
+      display: inline-block;
+      width: 150px;
+      text-align: left;
+      font-size: 60%;
+}​
+/*
+#formText {
+      font-size: 75%;
+      float: left;
+}
+
+input[type=text] {
+      border: 2px solid black;
+      border-style: 5%;
+      float: left;
+      height: 125%;
+}*/
+
+#resolveModal {
+      position: relative;
+      color: black;
+      bottom: 0%;
+      left: 60%;
+      font-size: 75%;
+      font-weight: bold;
+      text-align: center;
+      width: 15%;
+      border: solid;
+      border-color: black;
+}
+
+#saveModalAdd {
+      bottom: -10%;
+      left: 80%;
+}
+#cancelModalAdd {
+      bottom: 0%;
+      left: 60%;
+}
+#saveModalEdit {
+      bottom: -10%;
+      left: 80%;
+}
+#cancelModalEdit {
+      bottom: 0%;
+      left: 60%;
+}
+#removeModalEdit {
+      bottom: 10%;
+      left: 40%;
+}
+#acceptModalResolve {
+      bottom: -10%;
+      left: 80%;
+}
+#cancelModalResolve {
+      bottom: 0%;
+      left: 60%;
+}
+
+.close {
+      position: relative;
+      color: black;
+      bottom: 0%;
+      font-size: 75%;
+      font-weight: bold;
+      text-align: center;
+      width: 15%;
+      border: solid;
+      border-color: black;
+}
+
+.close:hover, .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+      overflow: left;
+}
+
+#removeModalWarning {
+      position: relative;
+      top: -100%;
+      left: 25%;
+      width: 60%;
+      height: 50%;
+      font-size: 75%;
+      text-align: center;
+}
+
+#warningText {
+      font-size: 75%;
+      text-align: left;
+}
+
+#removeModalYes {
+      left: 80%;
+      bottom: -25%;
+      font-size: 125%;
+}
+
+#removeModalNo {
+      left: 60%;
+      bottom: 0%;
+      font-size: 125%;
+}

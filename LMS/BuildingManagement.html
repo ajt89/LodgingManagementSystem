@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+Allan Tuquero
+ajt89@drexel.edu
+CS338:GUI, Project
+-->
+<html>
+    <head>
+        <title>Task List</title>
+        <link rel="stylesheet" type="text/css" href="style/LMS.css">
+        <script type = "text/javascript"  src = "scripts/jquery-3.1.1.min.js"></script>
+        <script type = "text/javascript"  src = "scripts/BuildingManagement.js"></script>
+    </head>
+    <body onload="domTable()">
+    
+    <div id="linkBar">
+        <div id="linkText">
+            Home/Building Management
+        </div>
+        <a href="Home.html">
+            <img src="images/house.png" id="house">
+        </a>
+        <div onclick="addRoom()" id="add">Add Room</div>
+        <div onclick="editRoom()" id="edit">Edit Room</div>
+
+        <div id="addModal" class="modal">
+            <div class="modal-content">
+                Add Room
+                <form action="scripts/TaskList.js" id="addForm">
+                    <div class="block">
+                        <label>Room Number:</label>
+                        <input type='text' id="nameAdd"/>
+                    </div>
+                    <div class="block">
+                        <label>Floor:</label>
+                        <input type='text' id="assigneeAdd"/>
+                    </div>
+                    <div class="block">
+                        <label>Type:</label>
+                        <input type='text' id="dateAdd"/>
+                    </div>
+                    <div class="block">
+                        <label>Capacity:</label>
+                        <input type='text' id="descriptionAdd"/>
+                    </div>
+                </form>
+            </div>
+            <div id="saveModalAdd" class="close">Save</div>
+            <div id="cancelModalAdd" class="close">Cancel</div>
+        </div>
+
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                Edit Room
+                <form action="scripts/TaskList.js" id="editForm">
+                    <div class="block">
+                        <label>Room Number:</label>
+                        <input type='text' id="nameEdit"/>
+                    </div>
+                    <div class="block">
+                        <label>Floor:</label>
+                        <input type='text' id="assigneeEdit"/>
+                    </div>
+                    <div class="block">
+                        <label>Type:</label>
+                        <input type='text' id="dateEdit"/>
+                    </div>
+                    <div class="block">
+                        <label>Capacity:</label>
+                        <input type='text' id="descriptionEdit"/>
+                    </div>
+                </form>
+            </div>
+            <div id="saveModalEdit" class="close">Save</div>
+            <div id="cancelModalEdit" class="close">Cancel</div>
+            <div id="removeModalEdit" class="close">Remove</div>
+            <div id="removeModalWarning" class="modal">
+                <div class="modal-content">
+                    Removal Warning
+                    <div id="warningText">Are you sure you want to remove this room?</div>
+                </div>
+                <div id="removeModalYes" class="close">Yes</div>
+                <div id="removeModalNo" class="close">No</div>
+            </div>
+        </div>
+        <table id="myTable">
+            <tr>
+                <td>Room Number</td>
+                <td>Floor</td>
+                <td>Type</td>
+                <td>Capacity</td>
+            </tr>
+        </table>
+
+        </div>
+    </div>
+
+    </body>
+</html>

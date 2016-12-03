@@ -1,0 +1,94 @@
+/*
+Allan Tuquero
+ajt89@drexel.edu
+CS338:GUI, Project
+*/
+
+body {
+      font-family: Arial, Verdana, sans-serif;
+      font-size: 125%;
+      color: #000000;
+      background-color: #90EE90;
+}
+
+#linkBar{
+      width: 85%;
+      height: 50px;
+      background: white;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      top: 50px;
+      border: solid;
+      border-color: black; 
+}
+
+#house{
+      height: auto; 
+      width: auto; 
+      max-width: 40px; 
+      max-height: 40px;
+      top: 10%;
+      position: absolute;
+      right: 1%;
+}
+
+#linkText{
+      position: relative;
+      top: 15%;
+      text-align: left;
+      left: 1%;
+      font-size: 150%;
+}
+
+#myTable {
+      width: 75%;
+      height: 10%;
+      background: white;
+      position: absolute;
+      top: 200%;
+      left: 25px;
+      border: solid;
+      border-color: black;
+      border-collapse: collapse;
+}
+
+th, td {
+      border: 2px solid black;
+}
+
+#addStaff {
+      width: 100px;
+      height: 50px;
+      line-height: 50px;
+      background: white;
+      position: absolute;
+      top: 200%;
+      left: 85%;
+      border: solid;
+      border-color: black;
+      text-align: center;
+      color: #000000;
+}
+
+#editStaff {
+      width: 100px;
+      height: 50px;
+      line-height: 50px;
+      background: white;
+      position: absolute;
+      top: 400%;
+      left: 85%;
+      border: solid;
+      border-color: black;
+      text-align: center;
+      color: #000000;
+}
+
+#addStaff:active, #editStaff:active {
+      background-color: #87CEFA;
+}
+
+.highlight {
+      background-color: #87CEFA;  
+}

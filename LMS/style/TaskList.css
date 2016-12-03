@@ -1,0 +1,155 @@
+/*
+Allan Tuquero
+ajt89@drexel.edu
+CS338:GUI, Project
+*/
+
+body {
+      font-family: Arial, Verdana, sans-serif;
+      font-size: 125%;
+      color: #000000;
+      background-color: #90EE90;
+}
+
+#linkBar{
+      width: 85%;
+      height: 50px;
+      background: white;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      top: 50px;
+      border: solid;
+      border-color: black; 
+}
+
+#house{
+      height: auto; 
+      width: auto; 
+      max-width: 40px; 
+      max-height: 40px;
+      bottom: 5px;
+      position: absolute;
+      right: 5px;
+}
+
+#linkText{
+      position: relative;
+      top: 10px;
+      text-align: left;
+      left: 5px;
+      font-size: 150%;
+}
+
+#list {
+      width: 1000px;
+      height: 1500px;
+      background: white;
+      position: absolute;
+      top: 150px;
+      left: 25px;
+      border: solid;
+      border-color: black;
+}
+
+#name {
+      position: absolute;
+      top: -35px;
+      right: 915px;
+      text-align: center;
+      color: #000000;
+      font-size: 150%;
+}
+
+#assignee {
+      position: absolute;
+      top: -35px;
+      right: 700px;
+      text-align: center;
+      color: #000000;
+      font-size: 150%;
+}
+
+#dueDate {
+      position: absolute;
+      top: -35px;
+      right: 500px;
+      text-align: center;
+      color: #000000;
+      font-size: 150%;
+}
+
+#description {
+      position: absolute;
+      top: -35px;
+      right: 300px;
+      text-align: center;
+      color: #000000;
+      font-size: 150%;
+}
+
+#myTable {
+      width: 1000px;
+      height: 35px;
+      background: white;
+      position: absolute;
+      top: 200%;
+      left: 25px;
+      border: solid;
+      border-color: black;
+      border-collapse: collapse;
+}
+
+th, td {
+      border: 2px solid black;
+}
+
+#addTask {
+      width: 100px;
+      height: 50px;
+      line-height: 50px;
+      background: white;
+      position: absolute;
+      top: 200%;
+      left: 85%;
+      border: solid;
+      border-color: black;
+      text-align: center;
+      color: #000000;
+}
+
+#editTask {
+      width: 100px;
+      height: 50px;
+      line-height: 50px;
+      background: white;
+      position: absolute;
+      top: 400%;
+      left: 85%;
+      border: solid;
+      border-color: black;
+      text-align: center;
+      color: #000000;
+}
+
+#resolveTask {
+      width: 100px;
+      height: 50px;
+      line-height: 25px;
+      background: white;
+      position: absolute;
+      top: 600%;
+      left: 85%;
+      border: solid;
+      border-color: black;
+      text-align: center;
+      color: #000000;
+}
+
+#addTask:active, #editTask:active, #resolveTask:active {
+      background-color: #87CEFA;
+}
+
+.highlight {
+      background-color: #87CEFA;  
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--
+Allan Tuquero
+ajt89@drexel.edu
+CS338:GUI, Project
+-->
+<html>
+    <head>
+        <title>Task List</title>
+        <link rel="stylesheet" type="text/css" href="style/LMS.css">
+        <script type = "text/javascript"  src = "scripts/jquery-3.1.1.min.js"></script>
+        <script type = "text/javascript"  src = "scripts/TaskList.js"></script>
+    </head>
+    <body onload="domTable()">
+    
+    <div id="linkBar">
+        <div id="linkText">
+            Home/Task List
+        </div>
+        <a href="Home.html">
+            <img src="images/house.png" id="house">
+        </a>
+        <div onclick="addTask()" id="add">Add Task</div>
+        <div onclick="editTask()" id="edit">Edit Task</div>
+        <div onclick="resolveTask()" id="resolve">Resolve Task</div>
+
+        <div id="addModal" class="modal">
+            <div class="modal-content">
+                Add Task
+                <form action="scripts/TaskList.js" id="addForm">
+                    <div class="block">
+                        <label>Name:</label>
+                        <input type='text' id="nameAdd"/>
+                    </div>
+                    <div class="block">
+                        <label>Assignee:</label>
+                        <input type='text' id="assigneeAdd"/>
+                    </div>
+                    <div class="block">
+                        <label>Due Date:</label>
+                        <input type='text' id="dateAdd"/>
+                    </div>
+                    <div class="block">
+                        <label>Description:</label>
+                        <input type='text' id="descriptionAdd"/>
+                    </div>
+                </form>
+            </div>
+            <div id="saveModalAdd" class="close">Save</div>
+            <div id="cancelModalAdd" class="close">Cancel</div>
+        </div>
+
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                Edit Task
+                <form action="scripts/TaskList.js" id="editForm">
+                    <div class="block">
+                        <label>Name:</label>
+                        <input type='text' id="nameEdit"/>
+                    </div>
+                    <div class="block">
+                        <label>Assignee:</label>
+                        <input type='text' id="assigneeEdit"/>
+                    </div>
+                    <div class="block">
+                        <label>Due Date:</label>
+                        <input type='text' id="dateEdit"/>
+                    </div>
+                    <div class="block">
+                        <label>Description:</label>
+                        <input type='text' id="descriptionEdit"/>
+                    </div>
+                </form>
+            </div>
+            <div id="saveModalEdit" class="close">Save</div>
+            <div id="cancelModalEdit" class="close">Cancel</div>
+            <div id="removeModalEdit" class="close">Remove</div>
+            <div id="removeModalWarning" class="modal">
+                <div class="modal-content">
+                    Removal Warning
+                    <div id="warningText">Are you sure you want to remove this task?</div>
+                </div>
+                <div id="removeModalYes" class="close">Yes</div>
+                <div id="removeModalNo" class="close">No</div>
+            </div>
+        </div>
+
+        <div id="resolveModal" class="modal">
+            <div class="modal-content">
+                Resolve Task
+                <form action="scripts/TaskList.js" id="resolveForm">
+                    <div class="block">
+                        <label>Name:</label>
+                        <input type='text' id="nameResolve"/>
+                    </div>
+                    <div class="block">
+                        <label>Assignee:</label>
+                        <input type='text' id="assigneeResolve"/>
+                    </div>
+                    <div class="block">
+                        <label>Completion Date:</label>
+                        <input type='text' id="completionDateResolve"/>
+                    </div>
+                    <div class="block">
+                        <label>Notes:</label>
+                        <input type='text' id="notesResolve"/>
+                    </div>
+                </form>
+            </div>
+            <div id="acceptModalResolve" class="close">Resolve</div>
+            <div id="cancelModalResolve" class="close">Cancel</div>
+        </div>
+        <table id="myTable">
+            <tr>
+                <td>Name</td>
+                <td>Assignee</td>
+                <td>Due Date</td>
+                <td>Description</td>
+            </tr>
+        </table>
+
+        <!--<div data-role="main" class="ui-content">
+            <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Show Popup Form</a>
+            <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+                <form method="post" action="demoform.asp">
+                    <div>
+                        <h3>Login information</h3>
+                        <label for="usrnm" class="ui-hidden-accessible">Username:</label>
+                        <input type="text" name="user" id="usrnm" placeholder="Username">
+                        <label for="pswd" class="ui-hidden-accessible">Password:</label>
+                        <input type="password" name="passw" id="pswd" placeholder="Password">
+                        <label for="log">Keep me logged in</label>
+                        <input type="checkbox" name="login" id="log" value="1" data-mini="true">
+                        <input type="submit" data-inline="true" value="Log in">
+                    </div>
+                </form>
+            </div> -->
+        </div>
+        <!--<div id="list" class="taskList">        
+
+            <div id="name">Name</div>
+            <div id="assignee">Assignee</div>
+            <div id="dueDate">Due Date</div>
+            <div id="description">Description</div>
+        </div>-->
+    </div>
+
+    </body>
+</html>

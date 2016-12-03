@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+Allan Tuquero
+ajt89@drexel.edu
+CS338:GUI, Project
+-->
+<html>
+    <head>
+        <title>Task List</title>
+        <link rel="stylesheet" type="text/css" href="style/LMS.css">
+        <script type = "text/javascript"  src = "scripts/jquery-3.1.1.min.js"></script>
+        <script type = "text/javascript"  src = "scripts/GuestManagement.js"></script>
+    </head>
+    <body onload="domTable()">
+    
+    <div id="linkBar">
+        <div id="linkText">
+            Home/Guest Management
+        </div>
+        <a href="Home.html">
+            <img src="images/house.png" id="house">
+        </a>
+        <div onclick="addGuest()" id="add">Add Guest</div>
+        <div onclick="editGuest()" id="edit">Edit Guest</div>
+        <div onclick="resolveGuest()" id="resolve">Checkout Guest</div>
+
+        <div id="addModal" class="modal">
+            <div class="modal-content">
+                Add Guest
+                <form action="scripts/TaskList.js" id="addForm">
+                    <div class="block">
+                        <label>Guest Name:</label>
+                        <input type='text' id="nameAdd"/>
+                    </div>
+                    <div class="block">
+                        <label>Room:</label>
+                        <input type='text' id="assigneeAdd"/>
+                    </div>
+                    <div class="block">
+                        <label>Checkout Date:</label>
+                        <input type='text' id="dateAdd"/>
+                    </div>
+                    <div class="block">
+                        <label>Description:</label>
+                        <input type='text' id="descriptionAdd"/>
+                    </div>
+                </form>
+            </div>
+            <div id="saveModalAdd" class="close">Save</div>
+            <div id="cancelModalAdd" class="close">Cancel</div>
+        </div>
+
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                Edit Guest
+                <form action="scripts/TaskList.js" id="editForm">
+                    <div class="block">
+                        <label>Guest Name:</label>
+                        <input type='text' id="nameEdit"/>
+                    </div>
+                    <div class="block">
+                        <label>Room:</label>
+                        <input type='text' id="assigneeEdit"/>
+                    </div>
+                    <div class="block">
+                        <label>Checkout Date:</label>
+                        <input type='text' id="dateEdit"/>
+                    </div>
+                    <div class="block">
+                        <label>Description:</label>
+                        <input type='text' id="descriptionEdit"/>
+                    </div>
+                </form>
+            </div>
+            <div id="saveModalEdit" class="close">Save</div>
+            <div id="cancelModalEdit" class="close">Cancel</div>
+            <div id="removeModalEdit" class="close">Remove</div>
+            <div id="removeModalWarning" class="modal">
+                <div class="modal-content">
+                    Removal Warning
+                    <div id="warningText">Are you sure you want to remove this Guest?</div>
+                </div>
+                <div id="removeModalYes" class="close">Yes</div>
+                <div id="removeModalNo" class="close">No</div>
+            </div>
+        </div>
+
+        <div id="resolveModal" class="modal">
+            <div class="modal-content">
+                Checkout Guest
+                <form action="scripts/TaskList.js" id="resolveForm">
+                    <div class="block">
+                        <label>Guest Name:</label>
+                        <input type='text' id="nameResolve"/>
+                    </div>
+                    <div class="block">
+                        <label>Room:</label>
+                        <input type='text' id="assigneeResolve"/>
+                    </div>
+                    <div class="block">
+                        <label>Checkout Date:</label>
+                        <input type='text' id="completionDateResolve"/>
+                    </div>
+                    <div class="block">
+                        <label>Notes:</label>
+                        <input type='text' id="notesResolve"/>
+                    </div>
+                </form>
+            </div>
+            <div id="acceptModalResolve" class="close">Resolve</div>
+            <div id="cancelModalResolve" class="close">Cancel</div>
+        </div>
+        <table id="myTable">
+            <tr>
+                <td>Guest Name</td>
+                <td>Room</td>
+                <td>Checkout Date</td>
+                <td>Notes</td>
+            </tr>
+        </table>
+        </div>
+    </div>
+    </body>
+</html>

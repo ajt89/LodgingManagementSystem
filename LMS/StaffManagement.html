@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+Allan Tuquero
+ajt89@drexel.edu
+CS338:GUI, Project
+-->
+<html>
+    <head>
+        <title>Task List</title>
+        <link rel="stylesheet" type="text/css" href="style/LMS.css">
+        <script type = "text/javascript"  src = "scripts/jquery-3.1.1.min.js"></script>
+        <script type = "text/javascript"  src = "scripts/StaffManagement.js"></script>
+    </head>
+    <body onload="domTable()">
+    
+    <div id="linkBar">
+        <div id="linkText">
+            Home/Staff Management
+        </div>
+        <a href="Home.html">
+            <img src="images/house.png" id="house">
+        </a>
+        <div onclick="addStaff()" id="add">Add Staff</div>
+        <div onclick="editStaff()" id="edit">Edit Staff</div>
+
+        <div id="addModal" class="modal">
+            <div class="modal-content">
+                Add Staff
+                <form action="scripts/TaskList.js" id="addForm">
+                    <div class="block">
+                        <label>Staff Name:</label>
+                        <input type='text' id="nameAdd"/>
+                    </div>
+                    <div class="block">
+                        <label>Role:</label>
+                        <input type='text' id="assigneeAdd"/>
+                    </div>
+                    <div class="block">
+                        <label>Permissions:</label>
+                        <input type='text' id="dateAdd"/>
+                    </div>
+                    <div class="block">
+                        <label>Notes:</label>
+                        <input type='text' id="descriptionAdd"/>
+                    </div>
+                </form>
+            </div>
+            <div id="saveModalAdd" class="close">Save</div>
+            <div id="cancelModalAdd" class="close">Cancel</div>
+        </div>
+
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                Edit Staff
+                <form action="scripts/TaskList.js" id="editForm">
+                    <div class="block">
+                        <label>Staff Name:</label>
+                        <input type='text' id="nameEdit"/>
+                    </div>
+                    <div class="block">
+                        <label>Role:</label>
+                        <input type='text' id="assigneeEdit"/>
+                    </div>
+                    <div class="block">
+                        <label>Permissions:</label>
+                        <input type='text' id="dateEdit"/>
+                    </div>
+                    <div class="block">
+                        <label>Notes:</label>
+                        <input type='text' id="descriptionEdit"/>
+                    </div>
+                </form>
+            </div>
+            <div id="saveModalEdit" class="close">Save</div>
+            <div id="cancelModalEdit" class="close">Cancel</div>
+            <div id="removeModalEdit" class="close">Remove</div>
+            <div id="removeModalWarning" class="modal">
+                <div class="modal-content">
+                    Removal Warning
+                    <div id="warningText">Are you sure you want to remove this staff?</div>
+                </div>
+                <div id="removeModalYes" class="close">Yes</div>
+                <div id="removeModalNo" class="close">No</div>
+            </div>
+        </div>
+        <table id="myTable">
+            <tr>
+                <td>Staff Name</td>
+                <td>Role</td>
+                <td>Permissions</td>
+                <td>Notes</td>
+            </tr>
+        </table>
+
+        </div>
+    </div>
+
+    </body>
+</html>
